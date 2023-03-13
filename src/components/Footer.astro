@@ -1,13 +1,20 @@
 ---
+import { Icon } from 'astro-iconify';
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
-</footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
+<footer id="colophon" class="bg-primary-600 text-white-50 hover:text-secondary-200 visited:text-white-50 ">
+    <div class="flex justify-between">
+     <div class="col">
+       <ul class="inline">
+        <li><a rel="me" href="https://mathstodon.xyz/@suzza"><Icon pack="fa-brands" name="mastodon" /></a></li>
+        <li><a href="https://twitter/com/beautyofmathsr"><iconify-icon icon="fa-brands:twitter" width="24"></iconify-icon></a></li>
+        <li><a href="https://www.pinterest.com/suzza_beauty/"><iconify-icon icon="fa-brands:pinterest-p" width="24"></iconify-icon></a></li>
+        <li><a href="https://www.youtube.com/@suzzasilver/"><iconify-icon icon="fa-brands:youtube" width="24"></iconify-icon></a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <iconify-icon icon="fa-regular:copyright"></iconify-icon> 2018-{today.getFullYear()} <a href="https://susansilver.net">Suzza Silver</a>
+    </div>
+  </div>
+	</footer><!-- #colophon -->
