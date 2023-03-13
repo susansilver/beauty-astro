@@ -3,18 +3,18 @@ import SocialLink from '../components/SocialLink.astro';
 const today = new Date();
 ---
 
-<footer id="colophon" class="bg-primary-600 text-white-50 p-3">
+<footer id="colophon" class="bg-primary-600 text-white-50 p-10">
     <div class="flex justify-between flex-row">
      <div class="col">
        <ul>
-        <li class="inline hover:text-secondary-200 visited:text-white-50 px-2"><a rel="me" href="https://mathstodon.xyz/@suzza"><i class="fa-brands fa-mastodon fa-lg"></i></a></li>
-        <li class="inline  hover:text-secondary-200 visited:text-white-50 px-2"><SocialLink icon="fa-brands fa-twitter fa-lg" url="https://twitter.com/beautyofmaths" /></li>
-        <li class="inline  hover:text-secondary-200 visited:text-white-50 px-2"><SocialLink icon="fa-brands fa-pinterest fa-lg" url="https://www.pinterest.com/beautyofmath" /></li>
-       <li class="inline hover:text-secondary-200 visited:text-white-50 px-2"> <SocialLink icon="fa-brands fa-youtube fa-lg" url="https://www.youtube.com/@suzzasilver/" /></li>
+        <li class="inline hover:text-secondary-200 visited:text-white-50 px-5"><a rel="me" href="https://mathstodon.xyz/@suzza"><i class="fa-brands fa-mastodon fa-2xl"></i></a></li>
+        <li class="inline  hover:text-secondary-200 visited:text-white-50 px-5"><SocialLink icon="fa-brands fa-twitter fa-2xl" url="https://twitter.com/beautyofmaths" /></li>
+        <li class="inline  hover:text-secondary-200 visited:text-white-50 px-5"><SocialLink icon="fa-brands fa-pinterest fa-2xl" url="https://www.pinterest.com/beautyofmath" /></li>
+       <li class="inline hover:text-secondary-200 visited:text-white-50 px-5"> <SocialLink icon="fa-brands fa-youtube fa-2xl" url="https://www.youtube.com/@suzzasilver/" /></li>
       </ul>
     </div>
     <div class="col">
-      © 2018-{today.getFullYear()} <a href="https://susansilver.net" class=" hover:text-secondary-200 visited:text-white-50 px-0.5">Suzza Silver</a>
+      © 2018-{today.getFullYear()} <a href="https://susansilver.net" class=" hover:text-secondary-200 visited:text-white-50 px-2 text-2xl">Suzza Silver</a>
     </div>
   </div>
 	</footer> 
