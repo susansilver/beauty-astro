@@ -1,13 +1,33 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from "astro-navbar";
 
 ---
 
 <header>
-	<nav class="bg-secondary-200 text-black-900 flex justify-center place-items-center gap-8 md:gap-16 text-center md:text-2xl p-3">
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
+	<nav class="bg-secondary-200 text-black-900 md:text-2xl p-3 ">
+		<div class="flex justify-start md:justify-center gap-9 md:gap-11">
+		<Astronav>
+			<div class="block md:hidden">
+				<MenuIcon class="w-6 h-6 text-black-900" />
+			</div>
+			  <!--
+			  // add `hidden` class by default for mobile
+			  // `lg:flex` is to make it visible in desktop
+			  // You may use custom CSS instead.
+			  -->
+			  <div>
+			  <MenuItems class="hidden md:flex">
+		<ul class="flex flex-col md:flex-row md:gap-5">
+		<li><HeaderLink href="/">Home</HeaderLink></li>
+		<li><HeaderLink href="/blog">Blog</HeaderLink></li>
+		<li ><HeaderLink href="/about">About</HeaderLink></li>
+		</ul>
+		</MenuItems>
+			  </div>
+  </Astronav>
+  </div>
+		
 	</nav>
 </header>
 <hr>
