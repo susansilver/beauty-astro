@@ -31,11 +31,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					</div>
 				<hr />
 				<div>
-					<div class="mx-auto grid grid-cols-4">
-						<div></div>
-						<div class="prose prose-slate prose-xl md:prose-lg col-span-2">
+					<div class="mx-auto grid grid-cols-12">
+			
+						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
 				<slot />
-				</div>
+						</div>
 					</div>
 				</div>
 			</article>
