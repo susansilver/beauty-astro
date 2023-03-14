@@ -5,11 +5,11 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from "astro-na
 ---
 
 <header>
-	<nav class="bg-secondary-200 text-black-900 md:text-2xl p-3 ">
+	<nav class="bg-secondary-200 text-black-900  md:text-2xl p-3 ">
 		<div class="flex justify-start md:justify-center gap-9 md:gap-11">
 		<Astronav>
 			<div class="block md:hidden">
-				<MenuIcon class="w-6 h-6 text-black-900" />
+				<MenuIcon class="w-12 h-12 text-black-900" />
 			</div>
 			  <!--
 			  // add `hidden` class by default for mobile
@@ -18,7 +18,7 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from "astro-na
 			  -->
 			  <div>
 			  <MenuItems class="hidden md:flex">
-		<ul class="flex flex-col md:flex-row md:gap-5">
+		<ul class="flex flex-col md:flex-row md:gap-11">
 		<li><HeaderLink href="/">Home</HeaderLink></li>
 		<li><HeaderLink href="/blog">Blog</HeaderLink></li>
 		<li ><HeaderLink href="/about">About</HeaderLink></li>
