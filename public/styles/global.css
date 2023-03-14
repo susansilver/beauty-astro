@@ -484,25 +484,16 @@ video {
   font-display: swap;
 }
 
-h1 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+hr {
+  height: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(216 27 96 / var(--tw-bg-opacity));
 }
 
 *, ::before, ::after {
@@ -603,6 +594,10 @@ body {
   position: static;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .inline {
   display: inline;
 }
@@ -611,17 +606,135 @@ body {
   display: flex;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.place-items-start {
+  place-items: start;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
   justify-content: space-between;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.bg-primary-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 129 231 / var(--tw-bg-opacity));
+}
+
 .bg-primary-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 80 152 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 160 190 / var(--tw-bg-opacity));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-primary-600 {
+  --tw-gradient-from: #115098;
+  --tw-gradient-to: rgb(17 80 152 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-primary-400 {
+  --tw-gradient-to: rgb(39 129 231 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #2781E7, var(--tw-gradient-to);
+}
+
+.to-primary-200 {
+  --tw-gradient-to: #95C1F3;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-logo {
+  font-family: "Righteous", Arial, cursive;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-black-900 {
+  --tw-text-opacity: 1;
+  color: rgb(33 33 33 / var(--tw-text-opacity));
 }
 
 .text-white-50 {
@@ -633,13 +746,55 @@ body {
   text-decoration-line: underline;
 }
 
+.outline {
+  outline-style: solid;
+}
+
+.outline-1 {
+  outline-width: 1px;
+}
+
+.outline-offset-1 {
+  outline-offset: 1px;
+}
+
 .visited\:text-white-50:visited {
   color: rgb(250 250 250 );
+}
+
+.hover\:rounded-xl:hover {
+  border-radius: 0.75rem;
+}
+
+.hover\:bg-primary-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(149 193 243 / var(--tw-bg-opacity));
 }
 
 .hover\:text-secondary-200:hover {
   --tw-text-opacity: 1;
   color: rgb(243 160 190 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:gap-16 {
+    gap: 4rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
 } 
 
   
