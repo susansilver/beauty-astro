@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import '../styles/global.css';
+import { SITE_TITLE } from '../consts';
 
 export interface Props {
 	title: string;
@@ -29,7 +30,7 @@ const { title, description, image = '/img/header-image-beauty-of-mathematics-the
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
 
 <!-- Primary Meta Tags -->
-<title>{title} - Beauty of Mathematics</title>
+<title>{title} - {SITE_TITLE}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
@@ -74,7 +75,7 @@ const { title, description, image = '/img/header-image-beauty-of-mathematics-the
 <!-- Place favicon.ico in the root directory -->
 
 <!-- Font Awesome -->
-<script defer src="/js/brands.js"></script>
+<script defer src="/js/all.js"></script>
 <script defer src="/js/fontawesome.js"></script>
 
 <meta name="robots" content="noindex">
