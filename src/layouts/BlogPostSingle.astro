@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 
+
 type Props = CollectionEntry<'blog'>['data'];
 
 const { frontmatter } = Astro.props;
@@ -22,7 +23,7 @@ const { frontmatter } = Astro.props;
 				<div id="meta" class="bg-primary-400 text-white-50 p-8">
 					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{frontmatter.title}</h1>
 				
-							<div class="flex justify-center place-items-center text-xl md:text-3xl p-3">
+							<div class="flex justify-center place-items-center text-xl md:text-3xl">
 								Last updated on {frontmatter.updatedDate}
 							</div>
 					</div>
