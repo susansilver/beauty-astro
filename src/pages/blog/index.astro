@@ -1,12 +1,23 @@
 ---
+import Layout from '/src/layouts/BlogPost.astro';
 import { getCollection } from 'astro:content';
 const blogEntries = await getCollection('blog')
 ---
+<Layout
+	title="Blog"
+	description="Lorem ipsum dolor sit amet"
+	pubDate={new Date('April 01 2018')}
+	updatedDate={new Date('Feburary 14 2023')}
+	heroImage="/img/header-image-beauty-of-mathematics-e.jpg"
+>
 
-<ul>
-    {blogEntries.map(blogPostEntry => (
-      <li>
-        <a href={`/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
-      </li>
-    ))}
-  </ul>
+<div class="grid grid-cols-12 gap-4">
+  {blogEntries.map(blogPostEntry => (
+    <a href={`/${blogPostEntry.slug}`} class="col-span-4">
+      <img src={blogPostEntry.data.heroImage} alt={blogPostEntry.data.alt}>
+      {blogPostEntry.data.title}
+    </a>
+  ))}
+</div>
+
+</Layout>
