@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import { Pagination, Card } from 'accessible-astro-components';
+import BaseHead from '/src/components/BaseHead.astro';
+import Header from '/src/components/Header.astro';
+import Footer from '/src/components/Footer.astro';
+
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection('blog');
+  return paginate(allPosts, { pageSize: 6 });
+}
+
+const { page } = Astro.props;
+
+---
+<html lang="en">
+	<head>
+		<BaseHead title="Blog" description="From Math Anxiety to Mathe Confidence" />
+	</head>
+
+	<body>
+		<Header />
+		<main>
+
+<h1 class="text-3xl p-5">Page {page.currentPage}</h1>
+
+  <!--List the array of astronaut info-->
+  <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4 md:mx-auto text-lg">
+    {page.data.map(blogPostEntry => (
+      <div class="relative p-3">
+      <Card
+      url={`/${blogPostEntry.slug}`}
+      img={blogPostEntry.data.heroImage}
+      title={blogPostEntry.data.title}
+      footer=""
+    >
+    <p class="m-5">{blogPostEntry.data.description}</p>
+    
+    </Card>
+    <button><a href={`/${blogPostEntry.slug}`} class="absolute hidden md:flex bottom-5 right-5 outline outline-1  outline-primary-900  p-3 md:text-2xl  text-black-900 bg-primary-400 rounded hover:rounded-xl  hover:bg-primary-200">Read More</a></button>
+      </div>
+    ))}
+</div>
+
+<div class="flex justify-center m-5">
+
+  <Pagination 
+  firstPage={page.url.prev ? '/blog' : null}
+  previousPage={page.url.prev ? page.url.prev : null}
+  nextPage={page.url.next ? page.url.next : null}
+  lastPage={page.url.next ? `/blog/${Math.round(page.total / page.size)}` : null}
+  currentPage={page.currentPage}
+  totalPages={Math.round(page.total / page.size)}
+/>
+</div>
+
+</main>
+		<Footer />
+	</body>
+</html>

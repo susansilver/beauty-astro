@@ -484,19 +484,6 @@ video {
   font-display: swap;
 }
 
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-
-  src: url('/fonts/fa-brands-400.woff2') format('woff2'),
-        url('/fonts/fa-brands-400.ttf') format('truetype');
-
-  font-weight: normal;
-
-  font-style: normal;
-
-  font-display: swap;
-}
-
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.125rem;
@@ -1312,8 +1299,20 @@ body {
   visibility: hidden;
 }
 
-.static {
-  position: static;
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .col-span-10 {
@@ -1326,6 +1325,10 @@ body {
 
 .col-end-12 {
   grid-column-end: 12;
+}
+
+.m-8 {
+  margin: 2rem;
 }
 
 .mx-auto {
@@ -1347,6 +1350,10 @@ body {
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1466,6 +1473,10 @@ body {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-5 {
@@ -1808,12 +1819,25 @@ body {
     grid-column-end: 10;
   }
 
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .md\:flex {
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -1826,6 +1850,10 @@ body {
 
   .md\:gap-11 {
     gap: 2.75rem;
+  }
+
+  .md\:gap-4 {
+    gap: 1rem;
   }
 
   .md\:p-3 {
@@ -1861,6 +1889,10 @@ body {
 @media (min-width: 1024px) {
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 } 
 
