@@ -1,0 +1,16 @@
+---
+const {prevUrl, nextUrl} = Astro.props
+---
+
+<nav class="text-2xl" aria-label="Blog pages">
+    {
+        prevUrl && (
+            <a href={prevUrl}>Previous</a>
+        )
+    }
+{
+    nextUrl && (
+        <a href={nextUrl}>Next</a>
+    )
+}
+</nav>

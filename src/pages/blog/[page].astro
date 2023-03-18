@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Pagination from '/src/components/Pagination.astro';
+
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await getCollection('blog');
+  return paginate(allPosts, { pageSize: 6 });
+}
+
+const { page } = Astro.props;
+
+---
+
+<h1>Page {page.currentPage}</h1>
+
+  <!--List the array of astronaut info-->
+  <div class="grid grid-cols-12 gap-4 mx-auto p-3">
+    {page.data.map(blogPostEntry => (
+      <a href={`/${blogPostEntry.slug}`} class="col-span-4 mx-auto p-5">
+        <img src={blogPostEntry.data.heroImage} alt={blogPostEntry.data.alt}>
+        {blogPostEntry.data.title}
+      </a>
+    ))}
+<Pagination prevUrl={page.url.prev} nextUrl={page.url.next}></Pagination>
+  </div>
