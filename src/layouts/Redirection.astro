@@ -1,0 +1,12 @@
+---
+const { frontmatter } = Astro.props;
+
+const destination = frontmatter.redirect;
+const metaContent = `0; URL=${ destination }`;
+---
+<html>
+    <meta charset="utf-8">
+    <title>Redirecting to { destination }</title>
+    <meta http-equiv="refresh" content={ metaContent }>
+    <link rel="canonical" href={ destination }>
+</html>

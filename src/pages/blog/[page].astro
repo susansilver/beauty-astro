@@ -1,6 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import Pagination from '/src/components/Pagination.astro';
+import BaseHead from '/src/components/BaseHead.astro';
+import Header from '/src/components/Header.astro';
+import Footer from '/src/components/Footer.astro';
 
 
 export async function getStaticPaths({ paginate }) {
@@ -12,7 +15,16 @@ const { page } = Astro.props;
 
 ---
 
-<h1>Page {page.currentPage}</h1>
+<html lang="en">
+	<head>
+		<BaseHead title="Blog" description="From Math Anxiety to Math Confidence." />
+	</head>
+
+	<body>
+		<Header />
+    <main>
+
+<h1 class="text-4xl p-3">Page {page.currentPage}</h1>
 
   <!--List the array of astronaut info-->
   <div class="grid grid-cols-12 gap-4 mx-auto p-3">
@@ -22,5 +34,11 @@ const { page } = Astro.props;
         {blogPostEntry.data.title}
       </a>
     ))}
-<Pagination prevUrl={page.url.prev} nextUrl={page.url.next}></Pagination>
   </div>
+
+<Pagination prevUrl={page.url.prev} nextUrl={page.url.next}></Pagination>
+ 
+</main>
+		<Footer />
+	</body>
+</html>

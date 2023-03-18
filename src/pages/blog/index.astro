@@ -4,6 +4,8 @@ import Header from '/src/components/Header.astro';
 import Footer from '/src/components/Footer.astro';
 import { getCollection } from 'astro:content';
 const blogEntries = await getCollection('blog');
+
+Astro.redirect("/blog/1")
 ---
 <html lang="en">
 	<head>
