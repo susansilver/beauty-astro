@@ -12,7 +12,7 @@ const { page } = Astro.props;
 
 ---
 
-<h1>Page {page.currentPage}</h1>
+<h1 class="text-3xl p-5">Page {page.currentPage}</h1>
 
   <!--List the array of astronaut info-->
   <div class="grid grid-cols-12 gap-4 mx-auto p-3">
@@ -22,5 +22,6 @@ const { page } = Astro.props;
         {blogPostEntry.data.title}
       </a>
     ))}
-<Pagination prevUrl={page.url.prev} nextUrl={page.url.next}></Pagination>
   </div>
+<Pagination prevUrl={page.url.prev} nextUrl={page.url.next}></Pagination>
+  
