@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import { Pagination, Card } from 'accessible-astro-components';
-import BaseHead from '/src/components/BaseHead.astro';
-import Header from '/src/components/Header.astro';
-import Footer from '/src/components/Footer.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
 
 
 export async function getStaticPaths({ paginate }) {
@@ -45,7 +46,7 @@ const { page } = Astro.props;
 
 <div class="flex justify-center m-5">
 
-  <Pagination 
+  <Pagination
   firstPage={page.url.prev ? '/blog' : null}
   previousPage={page.url.prev ? page.url.prev : null}
   nextPage={page.url.next ? page.url.next : null}
