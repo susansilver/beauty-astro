@@ -1307,12 +1307,12 @@ body {
   position: relative;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-5 {
+  bottom: 1.25rem;
 }
 
-.right-0 {
-  right: 0px;
+.right-5 {
+  right: 1.25rem;
 }
 
 .col-span-10 {
@@ -1327,8 +1327,8 @@ body {
   grid-column-end: 12;
 }
 
-.m-8 {
-  margin: 2rem;
+.m-5 {
+  margin: 1.25rem;
 }
 
 .mx-auto {
@@ -1531,6 +1531,11 @@ body {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -1803,10 +1808,6 @@ body {
 }
 
 @media (min-width: 768px) {
-  .md\:visible {
-    visibility: visible;
-  }
-
   .md\:col-span-6 {
     grid-column: span 6 / span 6;
   }
