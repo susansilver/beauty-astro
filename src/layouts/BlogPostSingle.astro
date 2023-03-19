@@ -3,6 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Infinity from '../components/Infinity.astro';
+
 
 
 
@@ -33,10 +35,12 @@ const { frontmatter } = Astro.props;
 			
 						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
 				<slot />
+			
 						</div>
 					</div>
 				</div>
 			</article>
+			<Infinity></Infinity>
 		</main>
 		<Footer />
 	</body>
