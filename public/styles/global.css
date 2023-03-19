@@ -491,11 +491,37 @@ body {
 }
 
 .card__content h3 a {
-  font-family: "Playfair Display", Arial, cursive;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(33 33 33 / var(--tw-text-opacity));
+}
+
+.btn {
+  margin-top: 2rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(33 150 243 / var(--tw-bg-opacity));
+  padding: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(33 33 33 / var(--tw-text-opacity));
+  outline-style: solid;
+  outline-width: 1px;
+  outline-color: #0D47A1;
+}
+
+.btn:hover {
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 101 192 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px) {
+  .btn {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 *, ::before, ::after {
@@ -1344,10 +1370,6 @@ body {
   margin-right: auto;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
 .block {
   display: block;
 }
@@ -1575,10 +1597,6 @@ body {
 
 .outline-1 {
   outline-width: 1px;
-}
-
-.outline-offset-1 {
-  outline-offset: 1px;
 }
 
 .outline-primary-900 {

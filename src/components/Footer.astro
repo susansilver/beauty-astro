@@ -3,13 +3,13 @@ import SocialLink from '../components/SocialLink.astro';
 const today = new Date();
 ---
 <hr>
-<footer id="colophon" class="bg-primary-600 text-white-50 p-10">
+<footer id="colophon" class="bg-primary-800 text-white-50 p-10">
     <div class="flex justify-between flex-row">
      <div class="col hidden md:flex">
        <ul>
-        <li class="inline hover:text-secondary-200 visited:text-white-50 px-5"><a rel="me" href="https://mathstodon.xyz/@suzza"><i class="fa-brands fa-mastodon fa-2xl"></i></a></li>
-        <li class="inline  hover:text-secondary-200 visited:text-white-50 px-5"><SocialLink icon="fa-brands fa-pinterest fa-2xl" url="https://www.pinterest.com/beautyofmath" /></li>
-       <li class="inline hover:text-secondary-200 visited:text-white-50 px-5"> <SocialLink icon="fa-brands fa-youtube fa-2xl" url="https://www.youtube.com/@suzzasilver/" /></li>
+        <li class="social"><SocialLink icon="fa-brands fa-mastodon fa-2xl" url="https://mathstodon.xyz/@suzza" /></li>
+        <li class="social"><SocialLink icon="fa-brands fa-pinterest fa-2xl" url="https://www.pinterest.com/beautyofmath" /></li>
+       <li class="social"> <SocialLink icon="fa-brands fa-youtube fa-2xl" url="https://www.youtube.com/@suzzasilver/" /></li>
       </ul>
     </div>
     <div class="col">
@@ -19,8 +19,11 @@ const today = new Date();
 	</footer> 
 
   <script>
-    document.querySelector("#copy").textContent =
+
+document.querySelector("#copy").textContent =
     new Date()
       .getFullYear()
       .toString();
+
+
 </script>

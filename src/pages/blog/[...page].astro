@@ -39,7 +39,7 @@ const { page } = Astro.props;
     <p class="m-5">{blogPostEntry.data.description}</p>
     
     </Card>
-    <button><a href={`/${blogPostEntry.slug}`} class="absolute hidden md:flex bottom-5 right-5 outline outline-1  outline-primary-900  p-3 md:text-2xl  text-black-900 bg-primary-400 rounded hover:rounded-xl  hover:bg-primary-200">Read More</a></button>
+    <button><a href={`/${blogPostEntry.slug}`} class="absolute hidden md:flex bottom-5 right-5 btn">Read More</a></button>
       </div>
     ))}
 </div>
@@ -64,7 +64,7 @@ const { page } = Astro.props;
 <style>
   .card__content h3 a {
     font-size: 2rem;
-    font-family: '"Playfair Display"', 'Arial', 'cursive';
     color: #212121;
+    font-weight: bold;
   }
 </style>

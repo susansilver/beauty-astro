@@ -15,15 +15,6 @@
 }
 
 @font-face {
-    font-family: 'Basteleur-Bold';
-    src: url('/fonts/Basteleur-Bold.woff2') format('woff2'),
-        url('/fonts/Basteleur-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Righteous';
     src: url('/fonts/righteous-v13-latin-regular.woff2') format('woff2'),
         url('/fonts/righteous-v13-latin-regular.woff') format('woff');
@@ -55,7 +46,15 @@ body {
 }
 
 .card__content h3 a {
-    @apply font-display text-black-900 text-2xl;
+    @apply font-bold text-black-900 text-2xl;
+}
+
+.btn {
+    @apply outline outline-1 outline-primary-900 mt-8 md:text-2xl p-2 text-black-900 bg-primary-400 rounded hover:rounded-xl hover:bg-primary-800;
+}
+
+.social {
+    @apply inline hover:text-secondary-200 visited:text-white-50 px-5;
 }
 
   } 
