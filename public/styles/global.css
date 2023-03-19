@@ -490,6 +490,14 @@ body {
   line-height: 1.75rem;
 }
 
+.card__content h3 a {
+  font-family: "Playfair Display", Arial, cursive;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(33 33 33 / var(--tw-text-opacity));
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1420,24 +1428,28 @@ body {
   border-radius: 0.25rem;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .bg-primary-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(39 129 231 / var(--tw-bg-opacity));
+  background-color: rgb(66 165 245 / var(--tw-bg-opacity));
 }
 
 .bg-primary-600 {
   --tw-bg-opacity: 1;
-  background-color: rgb(17 80 152 / var(--tw-bg-opacity));
+  background-color: rgb(30 136 229 / var(--tw-bg-opacity));
 }
 
 .bg-secondary-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(243 160 190 / var(--tw-bg-opacity));
+  background-color: rgb(244 143 177 / var(--tw-bg-opacity));
 }
 
 .bg-secondary-400 {
   --tw-bg-opacity: 1;
-  background-color: rgb(231 65 126 / var(--tw-bg-opacity));
+  background-color: rgb(236 64 122 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r {
@@ -1445,18 +1457,18 @@ body {
 }
 
 .from-primary-600 {
-  --tw-gradient-from: #115098;
-  --tw-gradient-to: rgb(17 80 152 / 0);
+  --tw-gradient-from: #1E88E5;
+  --tw-gradient-to: rgb(30 136 229 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .via-primary-400 {
-  --tw-gradient-to: rgb(39 129 231 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), #2781E7, var(--tw-gradient-to);
+  --tw-gradient-to: rgb(66 165 245 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #42A5F5, var(--tw-gradient-to);
 }
 
 .to-primary-200 {
-  --tw-gradient-to: #95C1F3;
+  --tw-gradient-to: #90CAF9;
 }
 
 .bg-cover {
@@ -1570,7 +1582,7 @@ body {
 }
 
 .outline-primary-900 {
-  outline-color: #041325;
+  outline-color: #0D47A1;
 }
 
 @media (min-width: 768px) {
@@ -1799,12 +1811,12 @@ body {
 
 .hover\:bg-primary-200:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(149 193 243 / var(--tw-bg-opacity));
+  background-color: rgb(144 202 249 / var(--tw-bg-opacity));
 }
 
 .hover\:text-secondary-200:hover {
   --tw-text-opacity: 1;
-  color: rgb(243 160 190 / var(--tw-text-opacity));
+  color: rgb(244 143 177 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
