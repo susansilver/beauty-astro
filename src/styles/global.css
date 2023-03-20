@@ -50,7 +50,7 @@ body {
 }
 
 .btn {
-    @apply outline outline-1 outline-primary-900 mt-8 md:text-2xl p-2 text-black-900 bg-primary-400 rounded hover:rounded-xl hover:bg-primary-800;
+    @apply outline outline-1 outline-accent-900 mt-8 md:text-2xl p-2 text-black-900 bg-accent-400 rounded hover:rounded-xl hover:bg-accent-600;
 }
 
 .social {
