@@ -16,9 +16,25 @@ const blog = defineCollection({
 			.transform((str) => (str ? new Date(str) : undefined)),
 		alt: z.string().optional(),
 		heroImage: z.string().optional(),
-		categories: z.array(z.string()).optional(),
+		categories: z.array(z.string()),
 		tags: z.array(z.string()).optional(),
 	}),
 });
 
-export const collections = { blog };
+const authors = defineCollection({
+	// Type-check frontmatter using a schema
+	schema: z.object({
+		title: z.string(),
+		description: z.string(),
+		// Transform string to Date object
+		pubDate: z
+			.string()
+			.or(z.date())
+			.transform((val) => new Date(val)),
+		id: z.string(),
+		alt: z.string().optional(),
+		heroImage: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, authors };
