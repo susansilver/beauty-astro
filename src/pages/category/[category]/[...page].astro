@@ -38,8 +38,9 @@ export async function getStaticPaths({ paginate }) {
 	<body>
 		<Header />
 		<main>
+      <h1 class="text-3xl p-5">Category: {capitalize(params.category)}</h1>
 
-<h1 class="text-3xl p-5">Page {page.currentPage}</h1>
+<h2 class="text-3xl p-5">Page {page.currentPage}</h2>
 
   <!--List the array of astronaut info-->
   <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4 md:mx-auto text-lg">
