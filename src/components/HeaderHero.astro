@@ -10,7 +10,7 @@ const categories = [...new Set(blogCollection.map(blog => blog.data.categories))
 	<nav class="bg-secondary-200 text-black-900">
 		<div class="flex justify-start md:justify-center gap-9 md:gap-11">
 		<Astronav>
-			<div class="hidden">
+			<div class="block md:hidden">
 				<MenuIcon class="w-12 h-12 text-black-900" />
 			</div>
 			  <!--
@@ -19,7 +19,8 @@ const categories = [...new Set(blogCollection.map(blog => blog.data.categories))
 			  // You may use custom CSS instead.
 			  -->
 			  <div>
-				<MenuItems>
+				<div>
+					<MenuItems class="hidden md:flex">
 					<ul class="flex flex-col md:flex-row md:gap-8 gap-5 p-8">
 						{categories.map((category) => (
 						  <li>
