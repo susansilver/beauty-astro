@@ -45,7 +45,9 @@ const { frontmatter } = Astro.props;
 			<div class="bg-primary-600 text-white-50 p-20 text-xl md:text-2xl">
 				<ul class="list-none flex justify-evenly gap-x-4">
 				  <li>Author: <a href="/authors/susan-silver" class="border-b-4 border-black-900 hover:text-black-900">{frontmatter.author.charAt(0).toUpperCase() + frontmatter.author.slice(1)}</a></li>
+				  <li><i class="fa-solid fa-user-astronaut text-secondary-200 fa-2xl"></i></li>
 				  <li>Category: <a class="border-b-4 border-black-900 hover:text-black-900" href={`/category/${frontmatter.categories}`}>{frontmatter.categories.charAt(0).toUpperCase() + frontmatter.categories.slice(1)}</a></li>
+				  <li><i class="fa-solid fa-satellite text-secondary-200 fa-2xl"></i></li>
 				  <li>
 					Tags: {frontmatter.tags.map((tag, index) => (
 					<span>
