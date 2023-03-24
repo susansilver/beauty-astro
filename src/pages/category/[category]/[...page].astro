@@ -44,13 +44,15 @@ export async function getStaticPaths({ paginate }) {
 
   <!--List the array of astronaut info-->
   <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4 md:mx-auto text-lg">
-    {page.data.map(blogPostEntry => (
-      <div class="relative p-3">
-      <Card
-      url={`/${blogPostEntry.slug}`}
-      img={blogPostEntry.data.heroImage}
-      title={blogPostEntry.data.title}
-      footer=""
+    {page.data
+      .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
+      .map(blogPostEntry => (
+        <div class="relative p-3">
+          <Card
+            url={`/${blogPostEntry.slug}`}
+            img={blogPostEntry.data.heroImage}
+            title={blogPostEntry.data.title}
+            footer=""
     >
     <p class="m-5">{blogPostEntry.data.description}</p>
     

@@ -44,28 +44,28 @@ const { posts } = Astro.props;
 
       <!--List the array of blog posts with the tag-->
       <div class="md:grid lg:grid-cols-3 md:grid-cols-2 md:gap-4 md:mx-auto text-lg">
-        {posts.map((blogPostEntry) => {
-          if (blogPostEntry.data.tags.includes(tag)) {
-            return (
-              <div class="relative p-3">
-                <Card
-                  url={`/${blogPostEntry.slug}`}
-                  img={blogPostEntry.data.heroImage}
-                  title={blogPostEntry.data.title}
-                  footer=""
-                >
-                  <p class="m-5">{blogPostEntry.data.description}</p>
-                </Card>
-                <button>
-                  <a href={`/${blogPostEntry.slug}`} class="absolute hidden md:flex bottom-5 right-5 btn">
-                    Read More
-                  </a>
-                </button>
-              </div>
-            );
-          }
-        })}
+        {posts
+          .filter(blogPostEntry => blogPostEntry.data.tags.includes(tag))
+          .sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate))
+          .map(blogPostEntry => (
+            <div class="relative p-3">
+              <Card
+                url={`/${blogPostEntry.slug}`}
+                img={blogPostEntry.data.heroImage}
+                title={blogPostEntry.data.title}
+                footer=""
+              >
+                <p class="m-5">{blogPostEntry.data.description}</p>
+              </Card>
+              <button>
+                <a href={`/${blogPostEntry.slug}`} class="absolute hidden md:flex bottom-5 right-5 btn">
+                  Read More
+                </a>
+              </button>
+            </div>
+          ))}
       </div>
+      
 
     </main>
     <Footer />
