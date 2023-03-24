@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props;
 		<Header />
 		<main>
 			<article>
-				<div id="meta" class="bg-primary-400 text-white-50 p-8">
+				<div id="meta" class="bg-primary-600 text-white-50 p-20">
 					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{frontmatter.title}</h1>
 				
 							<div class="flex justify-center place-items-center text-xl md:text-3xl">
@@ -42,7 +42,7 @@ const { frontmatter } = Astro.props;
 				</div>
 				
 			</article>
-			<div class="bg-primary-400 text-white-50 p-9 text-xl md:text-2xl">
+			<div class="bg-primary-600 text-white-50 p-20 text-xl md:text-2xl">
 				<ul class="list-none flex justify-evenly gap-x-4">
 				  <li>Author: <a href="/authors/susan-silver" class="border-b-4 border-black-900 hover:text-black-900">{frontmatter.author.charAt(0).toUpperCase() + frontmatter.author.slice(1)}</a></li>
 				  <li>Category: <a class="border-b-4 border-black-900 hover:text-black-900" href={`/category/${frontmatter.categories}`}>{frontmatter.categories.charAt(0).toUpperCase() + frontmatter.categories.slice(1)}</a></li>
