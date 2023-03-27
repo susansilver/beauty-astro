@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import { Pagination, Card } from 'accessible-astro-components';
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import BaseHead from '../../components/base/BaseHead.astro';
+import Header from '../../components/base/Header.astro';
+import Footer from '../../components/base/Footer.astro';
+
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
