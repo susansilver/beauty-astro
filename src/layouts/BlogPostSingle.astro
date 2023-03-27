@@ -4,13 +4,14 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Infinity from '../components/Infinity.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 
 
 
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { frontmatter } = Astro.props;
+const { frontmatter,headings } = Astro.props;
 ---
 
 <html lang="en">
@@ -34,7 +35,8 @@ const { frontmatter } = Astro.props;
 					<div class="mx-auto grid grid-cols-12">
 			
 						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
-				
+							<h2>Table of Contents</h2>
+							<TableOfContents headings={headings} />
 							<slot />
 				<Infinity></Infinity>
 			
