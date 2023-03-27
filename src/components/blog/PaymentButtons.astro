@@ -1,0 +1,51 @@
+---
+---
+<button id="tip" class="btn w-full">Tip me</button>
+
+<div id="tip-dropdown">
+  <a href="#">Cash App</a>
+  <a href="#">Venmo</a>
+  <a href="#">PayPal</a>
+  <a href="#">Ko-fi</a>
+</div>
+
+<style>
+#tip-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#tip-dropdown a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  padding: 12px 16px;
+}
+
+#tip-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
+<script>
+const username = "SuzzaS";
+const tipButton = document.querySelector("#tip");
+const tipDropdown = document.querySelector("#tip-dropdown");
+const links = tipDropdown.querySelectorAll("a");
+
+links[0].href = `https://cash.app/${username}`;
+links[0].target = "_blank";
+links[1].href = `https://venmo.com/${username}`;
+links[1].target = "_blank";
+links[2].href = `https://paypal.me/${username}`;
+links[2].target = "_blank";
+links[3].href = `https://ko-fi.com/${username}`;
+links[3].target = "_blank";
+
+tipButton.addEventListener("click", function() {
+  tipDropdown.style.display = tipDropdown.style.display === "none" ? "block" : "none";
+});
+</script>

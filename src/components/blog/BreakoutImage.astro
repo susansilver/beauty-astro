@@ -1,7 +1,10 @@
 ---
-const {src,alt} = Astro.props
+const {src,alt, caption} = Astro.props
 ---
+<figure class="flex flex-col p-2">
 <img class="full-width" src={src} alt={alt}>
+<figcaption class="flex justify-center text-xs">{caption}</figcaption>
+</figure>
 
 <style>
     .full-width {
