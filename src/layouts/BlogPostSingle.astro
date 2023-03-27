@@ -16,7 +16,7 @@ type Props = CollectionEntry<'blog'>['data'];
 const { frontmatter,headings } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<BaseHead title={frontmatter.title} description={frontmatter.description} />
 	</head>
@@ -35,10 +35,14 @@ const { frontmatter,headings } = Astro.props;
 				<hr />
 				<div>
 					<div class="mx-auto grid grid-cols-12">
-			
-						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
-							<h2>Table of Contents</h2>
+						<div class="prose prose-slate hidden md:flex md:col-span-4 md:col-start-1 md:col-end-4">
+							
 							<TableOfContents headings={headings} />
+						</div>
+			 
+						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
+							
+							
 							<slot />
 				<PaymentButtons></PaymentButtons>
 				<Infinity></Infinity>

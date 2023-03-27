@@ -31,7 +31,9 @@ function buildToc(headings): Heading[] {
 ---
 
 <nav class="toc">
-  <ul>
+  <ul class="sticky top-0 text-xs">
+    <h3>Table of Contents</h3>
     {toc.map((heading) => <TableOfContentsHeading heading={heading} />)}
   </ul>
 </nav>
+
