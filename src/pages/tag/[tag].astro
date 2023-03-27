@@ -34,13 +34,14 @@ const { posts } = Astro.props;
 
 <html lang="en">
   <head>
-    <BaseHead title="Tag Archive" description="" />
+    <BaseHead title={tag.replace('-', ' ')} description="" />
   </head>
 
   <body>
     <Header />
     <main>
-      <h1 class="text-3xl p-5">Tag: {tag}</h1>
+      <h1 class="text-3xl p-5">Tag: {tag.replace('-', ' ')}</h1>
+
       
 
       <!--List the array of blog posts with the tag-->
