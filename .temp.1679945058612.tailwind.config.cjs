@@ -7,7 +7,6 @@ module.exports = {
 	  extend: {
 		typography: {
 			DEFAULT: {
-			  css: {
 				a: {
 				  color: '#1565C0',
 				  '&:hover': {
@@ -17,7 +16,6 @@ module.exports = {
 			  },
 			},
 		  },
-	
 		fontFamily: {
 		  sans: ['Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
 		  display: ['"Playfair Display"', 'Arial', 'cursive'],
