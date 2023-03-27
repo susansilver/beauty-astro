@@ -1,7 +1,7 @@
 --- 
 const {icon,url, name} = Astro.props
 ---
-<a href={url} rel="me" class="transition ease-in-out" data-te-toggle="tooltip" title={name}><i class={icon} ></i></a>
+<a href={url} rel="me" data-te-toggle="tooltip" title={name}><i class={icon} ></i></a>
 
 <script>
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-te-toggle="tooltip"]'));
