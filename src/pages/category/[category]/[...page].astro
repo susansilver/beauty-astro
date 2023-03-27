@@ -38,7 +38,8 @@ export async function getStaticPaths({ paginate }) {
 	<body>
 		<Header />
 		<main>
-      <h1 class="text-3xl p-5">Category: {capitalize(params.category)}</h1>
+      <h1 class="text-3xl p-5">Category: {capitalize(params.category.replace('-', ' '))}</h1>
+
 
 <h2 class="text-3xl p-5">Page {page.currentPage}</h2>
 
