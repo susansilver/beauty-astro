@@ -5,7 +5,10 @@ import Footer from '../components/base/Footer.astro';
 import Header from '../components/base/Header.astro';
 import Infinity from '../components/blog/Infinity.astro';
 import PaymentButtons from '../components/blog/PaymentButtons.astro';
-import TableOfContents from '../components/blog/TableOfContents.astro';
+
+
+
+
 
 
 
@@ -13,7 +16,7 @@ import TableOfContents from '../components/blog/TableOfContents.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { frontmatter,headings } = Astro.props;
+const { frontmatter, headings } = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -24,7 +27,7 @@ const { frontmatter,headings } = Astro.props;
 	<body>
 		<Header />
 		<main>
-			<article>
+			<article id="single-article">
 				<div id="meta" class="bg-primary-600 text-white-50 p-20">
 					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{frontmatter.title}</h1>
 				
@@ -35,13 +38,9 @@ const { frontmatter,headings } = Astro.props;
 				<hr />
 				<div>
 					<div class="mx-auto grid grid-cols-12">
-						<div class="prose prose-slate hidden md:flex md:col-span-4 md:col-start-1 md:col-end-4">
-							
-							
-						</div>
+						
 			 
 						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
-							
 							
 							<slot />
 				<PaymentButtons></PaymentButtons>
@@ -64,9 +63,10 @@ const { frontmatter,headings } = Astro.props;
 					</span>
 					))}
 				  </li>
-				</ul>
-			  </div>
-		</main>
+				  
+				</div>
+			</main>
+		
 		<Footer />
 	</body>
 </html>
