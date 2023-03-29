@@ -8,12 +8,12 @@ import Infinity from '../components/blog/Infinity.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage, author,categories, tags } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={frontmatter.title} description={frontmatter.description} />
 	</head>
 
 	<body>
@@ -21,10 +21,10 @@ const { title, description, pubDate, updatedDate, heroImage, author,categories, 
 		<main>
 			<article>
 				<div id="meta" class="bg-primary-600 text-white-50 p-20">
-					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{title}</h1>
+					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{frontmatter.title}</h1>
 					
 							<div class="last-updated-on flex justify-center place-items-center text-xl md:text-3xl">
-								Last updated on &nbsp;<FormattedDate date={updatedDate} />
+								Updated on {frontmatter.updatedDate} 
 							</div>
 					</div>
 				<hr />
