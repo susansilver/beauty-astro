@@ -20,7 +20,7 @@ const categories = [...new Set(blogCollection.map(blog => blog.data.categories))
 			  -->
 			  <div>
 				<div>
-					<MenuItems class="hidden md:flex">
+					<MenuItems class="md:flex">
 						<ul class="flex flex-col md:flex-row md:gap-8 gap-5 p-8">
 						  {categories.map((category) => (
 							<li>
