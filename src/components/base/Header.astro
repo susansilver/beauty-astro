@@ -10,27 +10,29 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems } from "astro-na
 	</h2>
 	<nav class="bg-secondary-400 text-black-900">
 		<div class="flex justify-start md:justify-center gap-9 md:gap-11">
-			<Astronav>
-				<div class="block md:hidden">
-					<MenuIcon class="w-12 h-12 text-black-900" />
-				</div>
-				  <!--
-				  // add `hidden` class by default for mobile
-				  // `lg:flex` is to make it visible in desktop
-				  // You may use custom CSS instead.
-				  -->
-				  <div>
-				  <MenuItems class="md:flex">
-			<ul class="flex flex-col md:flex-row md:gap-11">
-			<li><HeaderLink href="/">Home</HeaderLink></li>
-			<li><HeaderLink href="/blog">Blog</HeaderLink></li>
-			<li><HeaderLink href="/about">About</HeaderLink></li>
+			<div class="block md:hidden">
+				<button id="menuButton" class="w-12 h-12 text-black-900">
+					<i class="fa-solid fa-bars fa-2xl"></i>
+				</button>
+			</div>
+			<ul id="menuList" class="hidden md:flex flex-col md:flex-row md:gap-11">
+				<li><HeaderLink href="/">Home</HeaderLink></li>
+				<li><HeaderLink href="/blog">Blog</HeaderLink></li>
+				<li><HeaderLink href="/about">About</HeaderLink></li>
 			</ul>
-			</MenuItems>
-				  </div>
-	  </Astronav>
-	  </div>
+		</div>
 	</nav>
+	
 </header>
 <hr>
+
+<script>
+	const menuButton = document.getElementById("menuButton");
+const menuList = document.getElementById("menuList");
+
+menuButton.addEventListener("click", () => {
+	menuList.classList.toggle("hidden");
+});
+
+</script>
 

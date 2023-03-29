@@ -7,33 +7,38 @@ const categories = [...new Set(blogCollection.map(blog => blog.data.categories))
 ---
 
 <header>
-	<nav class="bg-secondary-200 text-black-900">
-		<div class="flex justify-start md:justify-center gap-9 md:gap-11">
-		<Astronav>
+	<nav class="bg-secondary-400 text-black-900 p-10">
+		<div class="flex justify-start md:justify-center gap-11">
 			<div class="block md:hidden">
-				<MenuIcon class="w-12 h-12 text-black-900" />
+				<button id="menuButton" class="w-12 h-12 text-black-900">
+					<i class="fa-solid fa-bars fa-2xl"></i>
+				</button>
 			</div>
-			  <!--
-			  // add `hidden` class by default for mobile
-			  // `lg:flex` is to make it visible in desktop
-			  // You may use custom CSS instead.
-			  -->
-			  <div>
-				<div>
-					<MenuItems class="md:flex">
-						<ul class="flex flex-col md:flex-row md:gap-8 gap-5 p-8">
+			<ul id="menuList" class="hidden md:flex flex-col md:flex-row gap-11">
+	
+			
 						  {categories.map((category) => (
 							<li>
-							  <a class="border-b-4 border-black-900 hover:text-white-50 text-lg md:text-xl" href={`/category/${category}`}>{category.replace(/-/g, ' ').toUpperCase()}</a>
+							  <a class="md:border-b-4 md:border-black-900 hover:text-white-50 text-lg md:text-xl p-3 md:p-0 gap-11" href={`/category/${category}`}>{category.replace(/-/g, ' ').toUpperCase()}</a>
 							</li>
 						  ))}
-						</ul>
-					  </MenuItems>
+						
 					  
-			  </div>
-  </Astronav>
-  </div>
+					</ul>
+				</div>
+			</nav>
+			
+		</header>
+		<hr>
 		
-	</nav>
-</header>
-<hr>
+		<script>
+			const menuButton = document.getElementById("menuButton");
+		const menuList = document.getElementById("menuList");
+		
+		menuButton.addEventListener("click", () => {
+			menuList.classList.toggle("hidden");
+		});
+		
+		</script>
+		
+		
