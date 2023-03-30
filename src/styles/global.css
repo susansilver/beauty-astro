@@ -44,8 +44,10 @@
 body {
   @apply text-lg font-sans;
 }
+  } 
 
-.card__content h3 a {
+  @layer components {
+    .card__content h3 a {
     @apply font-bold text-black-900 text-2xl;
 }
 
@@ -56,8 +58,6 @@ body {
 .social {
     @apply inline hover:text-secondary-200 visited:text-white-50 px-5;
 }
-
-  } 
-
+  }
   
  

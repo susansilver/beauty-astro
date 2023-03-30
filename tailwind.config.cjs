@@ -1,4 +1,5 @@
 
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
 		  },
 	
 		fontFamily: {
-		  sans: ['Arial', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
+		  sans: ['Arial', ...defaultTheme.fontFamily.sans],
 		  display: ['"Playfair Display"', 'Arial', 'cursive'],
 		  logo: ['"Righteous"', 'Arial', 'cursive'],
 		  numbers: ['"Basteleur-Bold"', 'Arial', 'cursive'],
