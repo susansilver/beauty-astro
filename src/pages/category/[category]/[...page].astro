@@ -32,7 +32,7 @@ export async function getStaticPaths({ paginate }) {
 ---
     <html lang="en">
 	<head>
-		<BaseHead title={(params.category.toUpperCase().replace('-', ' '))} description="" />
+		<BaseHead title={(params.category.toUpperCase().replace('-', ' '))} description={`Category archive for ${params.category.replace('-', ' ')}`} />
 	</head>
 
 	<body>

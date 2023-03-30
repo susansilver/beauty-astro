@@ -34,7 +34,7 @@ const { posts } = Astro.props;
 
 <html lang="en">
   <head>
-    <BaseHead title={tag.toUpperCase().replace('-', ' ')} description="" />
+    <BaseHead title={tag.toUpperCase().replace('-', ' ')} description={`Tag archive for ${tag.replace('-', ' ')}`}  />
   </head>
 
   <body>
