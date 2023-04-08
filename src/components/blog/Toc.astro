@@ -1,0 +1,24 @@
+---
+---
+
+<h2> Table of Contents</h2>
+<div id="toc" class="flex justify-start">
+    <div class="block">
+        <button id="tocButton">
+            <i class="fa-solid  fa-caret-downfa-2xl text-black-900"></i>
+        </button>
+    </div> 
+    <div class="hidden" id="tocMenu">
+    <slot />
+    </div>
+</div>
+
+ <script>
+    const tocButton = document.getElementById("tocButton");
+  const tocMenu = document.getElementById("tocMenu");
+  
+  tocButton.addEventListener("click", () => {
+    tocMenu.classList.toggle("hidden");
+  });
+  
+  </script>
