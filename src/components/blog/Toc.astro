@@ -1,12 +1,11 @@
 <h2>
-  <i id="tocButton" class="fa-solid fa-caret-down hover:scale-150 hover:text-accent-500"></i> Table of Contents
+  <button id="tocButton" aria-expanded="false" aria-controls="tocList"><i aria-hidden="true" class="fa-solid fa-caret-down hover:scale-150 hover:text-accent-500"></i> Table of Contents</button>
 </h2>
-<div id="TOC">
-    <div id="tocList" class="hidden">
+<section>
+    <div id="tocList" class="hidden" aria-labelledby="tocButton">
       <slot />
     </div>
-  </div>
-
+</section>
 
 <script>
   const tocButton = document.getElementById("tocButton");
@@ -14,6 +13,6 @@
 
   tocButton.addEventListener("click", () => {
     tocList.classList.toggle("hidden");
+    tocButton.setAttribute("aria-expanded", tocList.classList.contains("hidden") ? "false" : "true");
   });
 </script>
-
