@@ -1,24 +1,19 @@
----
----
-
-<h2> Table of Contents</h2>
-<div id="toc" class="flex justify-start">
-    <div class="block">
-        <button id="tocButton">
-            <i class="fa-solid  fa-caret-downfa-2xl text-black-900"></i>
-        </button>
-    </div> 
-    <div class="md:hidden" id="tocMenu">
-    <slot />
+<h2>
+  <i id="tocButton" class="fa-solid fa-caret-down"></i> Table of Contents
+</h2>
+<div id="TOC">
+    <div id="tocList" class="hidden">
+      <slot />
     </div>
-</div>
+  </div>
 
- <script>
-    const tocButton = document.getElementById("tocButton");
-  const tocMenu = document.getElementById("tocMenu");
-  
+
+<script>
+  const tocButton = document.getElementById("tocButton");
+  const tocList = document.getElementById("tocList");
+
   tocButton.addEventListener("click", () => {
-    tocMenu.classList.toggle("hidden");
+    tocList.classList.toggle("hidden");
   });
-  
-  </script>
+</script>
+
