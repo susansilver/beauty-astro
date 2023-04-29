@@ -7,7 +7,7 @@ import Footer from '../../../components/base/Footer.astro';
 
 
 export async function getStaticPaths({ paginate }) {
-    const allPosts = await  getCollection('blog');
+    const allPosts = await  getCollection('blog');;
     let allCategories = allPosts
       .filter((f) => f.data.categories != undefined)
       .map((p) => p.data.categories);
