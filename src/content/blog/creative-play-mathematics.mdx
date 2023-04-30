@@ -16,8 +16,9 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 import BlockQuoteBook from '../../components/blog/BlockQuoteBook.astro';
 import AlignRight from '../../components/blog/AlignRight.astro';
 import AlignCenter from '../../components/blog/AlignCenter.astro';
-
 import Toc from '../../components/blog/Toc.astro';
+import { Image } from 'astro:assets';
+import Compare from '../../assets/math-games.jpg';
 
 <Toc>
 - [A Love of Algebra](#ALoveofAlgebra)
@@ -67,10 +68,7 @@ I made up two games which both relied on the fact that letters could represent n
 
 In the first, I would assign numerical values of numbers to letters. I would then add up the value of words and compare them.
 
-
-![A drawing of a cat and dog where letters have been turned into digits and added comparing the value of each word"](../../assets/math-games.jpg) 
-
-
+<Image src={Compare} alt="A drawing of a cat and dog where letters have been turned into digits and added comparing the value of each word" />
 
 The other was a game of logic. I would write down random equations of addition, subtraction, and multiplication. 
 I would leave one value missing so that I would have to logically guess what number would make the equation true.
