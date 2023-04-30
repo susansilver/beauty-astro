@@ -8,7 +8,7 @@ id: Suzza-Silver
 
 ---
 
-![Suzza reading a math book on a glitched background with a pink to orange gradient](/img/TW-GLITCH-AVATAR.jpg) 
+![Suzza reading a math book on a glitched background with a pink to orange gradient](../assets/TW-GLITCH-AVATAR.jpg) 
 
 Hello! I’m Suzza and I’m the writer with the mathematical muse. Strange, right? So often we’re told that we’re either good at Math or English. For some reason pursuing both seems a bit out of the ordinary. I fell in love with mathematics as a kid but we are an unlikely pair.
 
