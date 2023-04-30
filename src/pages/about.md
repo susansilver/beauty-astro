@@ -8,9 +8,9 @@ id: Suzza-Silver
 
 ---
 
-import MediaText from '../components/blog/MediaText.astro';
+![Suzza reading a math book on a glitched background with a pink to orange gradient](/img/TW-GLITCH-AVATAR.jpg) 
 
-<MediaText src="/img/avatar-math-book-glitch.png" alt="Suzza reading a math book on a glitched background with a pink to orange gradient" text="Hello! I’m Suzza and I’m the writer with the mathematical muse. Strange, right? So often we’re told that we’re either good at Math or English. For some reason pursuing both seems a bit out of the ordinary. I fell in love with mathematics as a kid but we are an unlikely pair." />
+Hello! I’m Suzza and I’m the writer with the mathematical muse. Strange, right? So often we’re told that we’re either good at Math or English. For some reason pursuing both seems a bit out of the ordinary. I fell in love with mathematics as a kid but we are an unlikely pair.
 
 I _flunked_ fourth-grade mathematics. I assumed that I was bad at math. My math-anxious family couldn’t help. A frustrating experience for all. I used [a simple trick to convert my numbers to letters](https://beautyofmathematics.com/a-writers-illicit-love-affair-with-mathematics/). This allowed me to understand mathematical operations like multiplication.
 
