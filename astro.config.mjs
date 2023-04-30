@@ -10,6 +10,12 @@ import compressor from "astro-compressor";
 
 // https://astro.build/config
 export default defineConfig({
+  experimental: {
+    assets: true
+   },
+   image: {
+    service: "astro/assets/services/sharp",
+  },
   site: 'https://beautyofmathematics.com',
   integrations: [mdx(), sitemap(), tailwind(), svelte(), deadLinks(), compress(), compressor()]
 });
