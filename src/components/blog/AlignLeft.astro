@@ -1,9 +1,10 @@
 ---
+import { Image } from 'astro:assets';
 const {src, alt, caption} = Astro.props
 ---
 <div class="float-left text-xs p-2">
 <figure>
-<img src={src} alt={alt}>
+<Image src={src} alt={alt} />
 <figcaption class="text-left">{caption}</figcaption>
 </figure>
 </div>

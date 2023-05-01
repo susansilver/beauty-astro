@@ -1,8 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 const {src, alt, caption} = Astro.props
 ---
 <figure class="p-2">
-<img src={src} alt={alt} class="mx-auto block w-6/12" >
+<Image src={src} alt ={alt} class="mx-auto block w-6/12" />
 <figcaption class="flex justify-center text-xs">{caption}</figcaption>
 </figure>
 

@@ -1,9 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
-import { Pagination, Card } from 'accessible-astro-components';
+import { Pagination } from 'accessible-astro-components';
 import BaseHead from '../../../components/base/BaseHead.astro';
 import Header from '../../../components/base/Header.astro';
 import Footer from '../../../components/base/Footer.astro';
+import Card from '../../../components/blog/Card.astro';
 
 
 export async function getStaticPaths({ paginate }) {
@@ -52,6 +53,7 @@ export async function getStaticPaths({ paginate }) {
           <Card
             url={`/${blogPostEntry.slug}`}
             img={blogPostEntry.data.heroImage}
+            alt={blogPostEntry.data.alt}
             title={blogPostEntry.data.title}
             footer=""
     >
