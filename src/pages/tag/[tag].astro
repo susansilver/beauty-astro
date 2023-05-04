@@ -34,13 +34,13 @@ const { posts } = Astro.props;
 
 <html lang="en">
   <head>
-    <BaseHead title={tag.toUpperCase().replace('-', ' ')} description={`Tag archive for ${tag.replace('-', ' ')}`}  />
+    <BaseHead title={tag.toLowerCase().replace('-', ' ')} description={`Tag archive for ${tag.replace('-', ' ')}`}  />
   </head>
 
   <body>
     <Header />
     <main>
-      <h1 class="text-3xl p-5">Tag: {tag.toUpperCase().replace('-', ' ')}</h1>
+      <h1 class="text-3xl p-5">Tag: {tag.toLowerCase().replace('-', ' ')}</h1>
 
       
 

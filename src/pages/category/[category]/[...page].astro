@@ -33,13 +33,13 @@ export async function getStaticPaths({ paginate }) {
 ---
     <html lang="en">
 	<head>
-		<BaseHead title={(params.category.toUpperCase().replace('-', ' '))} description={`Category archive for ${params.category.replace('-', ' ')}`} />
+		<BaseHead title={(params.category.toLowerCase().replace('-', ' '))} description={`Category archive for ${params.category.replace('-', ' ')}`} />
 	</head>
 
 	<body>
 		<Header />
 		<main>
-      <h1 class="text-3xl p-5">Category: {(params.category.toUpperCase().replace('-', ' '))}</h1>
+      <h1 class="text-3xl p-5">Category: {(params.category.toLowerCase().replace('-', ' '))}</h1>
 
 
 <h2 class="text-3xl p-5">Page {page.currentPage}</h2>
