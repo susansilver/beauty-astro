@@ -3,7 +3,7 @@ layout: ../layouts/BlogPost.astro
 title: "Privacy Policy"
 description: Find out how we protect your personal information on our website. Learn about our use of cookies and third-party services like ConvertKit and YouTube, and your rights over your data. 
 pubDate: "02/19/2022"
-updatedDate: 02/14/2023
+updatedDate: 05/1/2023
 id: Suzza-Silver
 
 ---
@@ -15,19 +15,9 @@ Our website address is: [https://beautyofmathematics.com](https://beautyofmathem
 Privacy information is controlled by Susan Silver who can be reached 
 at [susan@susansilver.net](mailto:susan@susansilver.net).
 
-## Contact Forms
-
-To assist with sending you requested information, we use
- **_**ConvertKit to collect and store your email address.**_** 
- ConvertKit outlines their use of your personal data and anonymized 
- data https://convertkit.com/privacy here. You may opt out of the 
- collection of your data by unsubscribing (we will remove your data)
-  and contacting them using the instructions on their privacy 
-  page https://convertkit.com/privacy.
-
 ## Cookies
 
-Third-party services like ConvertKit and Youtube may 
+Third-party services like Youtube may 
 use cookies for functionality, quality, and tracking across websites. 
 You can opt out of this via their websites and their privacy policies.
 
@@ -68,15 +58,10 @@ information at any time (except they cannot change their username).
 See the following privacy policies to opt out of individual services.
 
 
-[ConvertKit](https://convertkit.com/privacy)
-
 [Youtube](https://www.youtube.com/howyoutubeworks/our-commitments/protecting-user-data/)
 
 
-## Where we send your data
-
-Visitor comments may be checked through an automated spam detection 
-service.
+## Where we send your data.
 
 Third parties have access to your data as noted within this agreement.
 
