@@ -17,7 +17,7 @@
     "@astrojs/sitemap": "^1.3.3",
     "@astrojs/svelte": "^2.2.0",
     "@astrojs/tailwind": "^3.1.3",
-    "astro": "^2.6.1",
+    "astro": "^2.6.3",
     "astro-compress": "^1.1.47",
     "astro-compressor": "^0.4.0",
     "astro-dead-links": "^0.0.1",
