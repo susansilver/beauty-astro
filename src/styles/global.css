@@ -23,6 +23,8 @@
     font-display: swap;
 }
 
+
+
 @font-face {
     font-family: 'Playfair Display';
     src: url('/fonts/playfair-display-v30-latin-regular.woff2') format('woff2'),
@@ -35,12 +37,9 @@
 body {
   @apply text-lg font-sans;
 }
-  } 
+  
 
-  @layer components {
-    .card__content h3 a {
-    @apply font-bold text-black-900 text-2xl;
-}
+
 
 .btn {
     @apply outline outline-1 outline-accent-900 mt-8 md:text-2xl p-2 text-black-900 bg-accent-400 rounded hover:rounded-xl hover:bg-accent-600;
