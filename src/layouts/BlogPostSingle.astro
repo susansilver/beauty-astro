@@ -5,6 +5,7 @@ import Footer from '../components/base/Footer.astro';
 import Header from '../components/base/Header.astro';
 import Infinity from '../components/blog/Infinity.astro';
 import PaymentButtons from '../components/blog/PaymentButtons.astro';
+import Comments from '../components/Comments.astro';
 
 
 
@@ -49,8 +50,8 @@ const { frontmatter, headings } = Astro.props;
 						</div>
 					</div>
 				</div>
-				
 			</article>
+			<Comments/>
 			<div class="bg-primary-600 dark:bg-primary-200 dark:text-slate-900 text-white-50 p-20 text-xl md:text-2xl">
 				<ul class="list-none flex justify-evenly gap-x-4">
 				  <li>Author: <a href=`/authors/${frontmatter.author}` class="hover:text-black-900">{frontmatter.author.toLowerCase().replace(/-/g, ' ')}</a></li>
@@ -63,7 +64,7 @@ const { frontmatter, headings } = Astro.props;
 					</span>
 					))}
 				  </li>
-				  
+				  </ul>
 				</div>
 			</main>
 		
