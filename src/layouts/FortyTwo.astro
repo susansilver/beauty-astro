@@ -21,7 +21,7 @@ const { frontmatter } = Astro.props;
 
 	<body>
 		<Header />
-		<main>
+		<main class="dark:bg-black-900">
 			<article>
 				<AnimatedGradient>42</AnimatedGradient>
 				<FactGenerator />
@@ -29,13 +29,13 @@ const { frontmatter } = Astro.props;
 				<div>
 					<div class="mx-auto grid grid-cols-12">
 			
-						<div class="prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
+						<div class="dark:prose-invert prose prose-slate prose-xl md:prose-lg col-span-10 col-start-2 col-end-12 md:col-span-6  md:col-start-4 md:col-end-10 mx-auto">
 				<slot />
 						</div>
 					</div>
 				</div>
 				<hr />
-				<div id="meta" class="bg-primary-600 text-white-50 p-20">
+				<div id="meta" class="dark:bg-primary-200 dark:text-slate-900 bg-primary-600 text-white-50 p-20">
 					<h1 class="title font-display flex justify-center place-items-center text-3xl md:text-6xl">{frontmatter.title}</h1>
 					
 							<div class="last-updated-on flex justify-center place-items-center text-xl md:text-3xl">

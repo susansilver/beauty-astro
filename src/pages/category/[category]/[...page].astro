@@ -36,7 +36,7 @@ export async function getStaticPaths({ paginate }) {
 		<BaseHead title={(params.category.toLowerCase().replace('-', ' '))} description={`Category archive for ${params.category.replace('-', ' ')}`} />
 	</head>
 
-	<body>
+	<body class="dark:bg-slate-800 dark:text-white-50">
 		<Header />
 		<main>
       <h1 class="text-3xl p-5">Category: {(params.category.toLowerCase().replace('-', ' '))}</h1>
@@ -82,10 +82,3 @@ export async function getStaticPaths({ paginate }) {
 	</body>
 </html>
 
-<style>
-  .card__content h3 a {
-    font-size: 2rem;
-    color: #212121;
-    font-weight: bold;
-  }
-</style>

@@ -30,7 +30,7 @@ const { tag } = Astro.params
         <BaseHead title={tag.toLowerCase().replace('-', ' ')} description={`Tag archive for ${tag.replace('-', ' ')}`}  />
 	</head>
 
-	<body>
+	<body class="dark:bg-slate-800 dark:text-white-50">
 		<Header />
 		<main>
             <h1 class="text-3xl p-5">Tag: {tag.toLowerCase().replace('-', ' ')}</h1>
@@ -74,10 +74,3 @@ const { tag } = Astro.params
 	</body>
 </html>
 
-<style>
-  .card__content h3 a {
-    font-size: 2rem;
-    color: #212121;
-    font-weight: bold;
-  }
-</style>
