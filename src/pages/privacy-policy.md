@@ -3,7 +3,7 @@ layout: ../layouts/BlogPost.astro
 title: "Privacy Policy"
 description: Find out how we protect your personal information on our website. Learn about our use of cookies and third-party services like ConvertKit and YouTube, and your rights over your data. 
 pubDate: "02/19/2022"
-updatedDate: 05/1/2023
+updatedDate: May 1st, 2023
 id: Suzza-Silver
 
 ---

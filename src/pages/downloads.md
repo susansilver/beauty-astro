@@ -3,7 +3,7 @@ title: "Cross Stitch Patterns"
 layout: ../layouts/BlogPost.astro
 description: Download free cross stitch patterns, including 100 digits of e and pi, Disney's Haunted Mansion, and various Pride Flag designs. Choose from a range of mathematical and cultural designs, including patterns for Alan Turing bookmarks and Alice in Wonderland.
 pubDate: "01/02/2023"
-updatedDate: 01/02/2023
+updatedDate: January 2nd, 2023
 id: Suzza-Silver
 
 ---
