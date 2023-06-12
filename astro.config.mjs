@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import svelte from "@astrojs/svelte";
 import deadLinks from "astro-dead-links";
 import compress from "astro-compress";
-import pagefind from "astro-pagefind";
+
 
 import compressor from "astro-compressor";
 
@@ -18,5 +18,5 @@ export default defineConfig({
     format: "file",
   },
   site: 'https://beautyofmathematics.com',
-  integrations: [mdx(), sitemap(), tailwind(), svelte(), deadLinks(), compress(), pagefind(), compressor()]
+  integrations: [mdx(), sitemap(), tailwind(), svelte(), deadLinks(), compress(), compressor()]
 });
