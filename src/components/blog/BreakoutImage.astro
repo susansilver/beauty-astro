@@ -4,7 +4,7 @@ const {src, alt, caption} = Astro.props
 ---
 <div class="text-xs p-2">
 <figure>
-<Image src={src} alt={alt} class="full-width" />
+<Image src={src} alt={alt} format="avif" quality="max" class="full-width" />
 <figcaption class="flex justify-center text-xs">{caption}</figcaption>
 </figure>
 </div>

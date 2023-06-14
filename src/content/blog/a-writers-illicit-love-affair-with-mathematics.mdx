@@ -23,6 +23,7 @@ import Compare from '../../assets/math-games.jpg';
 import Blue from '../../assets/blue-blocks-ones-tens-hundreds.jpg';
 import AlignCenter from '../../components/blog/AlignCenter.astro';
 import BreakoutImage from '../../components/blog/BreakoutImage.astro';
+import { Image } from 'astro:assets'
 
 <Toc>
 - [I Nearly Missed the Love of my Life](#INearlyMissedtheLoveofmyLife)
@@ -128,7 +129,11 @@ import BlockQuoteQuote from '../../components/blog/BlockQuoteQuote.astro';
 
 <BlockQuoteQuote> I didn’t know how to read the sentence. </BlockQuoteQuote>
 
-![A diagram of a mathematical equation for a computer program](../../assets/mathematical-grammer.jpg)
+
+import equation from '../../assets/mathematical-grammer.jpg';
+
+<Image src={equation} alt="A diagram of a mathematical equation for a computer program" format="avif" quality="mid"/>
+
 credit: [Edwin Law Hui Hean](https://www.mmu.edu.my/foe/internal-login/)
 
 ### <a name="LovePutsintoPerspectiveWhatMatters"></a> Love Puts into Perspective What Matters
