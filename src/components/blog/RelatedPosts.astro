@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+
+
+const allPosts = await getCollection('blog');
+let allCategories = allPosts
+  .filter((f) => f.data.categories != undefined)
+  .map((p) => p.data.categories);
+let allCategoriesUnique = [...new Set(allCategories.flat())];
+let matchedCategories = allCategoriesUnique.map((category) => {
+  const filteredPosts = allPosts.filter((post) => 
+    post.data.categories.includes(category) && post.data.draft !== true
+  );
+  return { category, posts: filteredPosts };
+});
+
+
+---
+
+  <div class="prose mt-5 p-5 rounded-lg max-w-none bg-gray-200">
+  <h2 class="text-center">You might also like...</h2>
+  {matchedCategories.map((post) => (
+    <div class="flex flex-col">
+      <div>
+        <img src={post.data.heroImage} alt={post.data.alt}>
+      </div>
+      <div>
+        <span>{post.data.description}</span>
+      </div>
+    </div>
+  ))};
+</div>
